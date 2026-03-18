@@ -14,6 +14,10 @@ yarn-error.log
 # Local state
 state/
 Vault/**/state*
+Vault/Needs_Action/
+
+# Secrets
+config.env
 
 # Vercel / local deployment
 .vercel/
