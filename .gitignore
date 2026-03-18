@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+venv/
+.env
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Local state
+state/
+Vault/**/state*
+
+# IDE
+.vscode/
+.idea/

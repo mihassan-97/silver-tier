@@ -1,0 +1,11 @@
+# Python dependencies
+anthropic>=0.0.37
+requests>=2.28
+python-dotenv>=1.0
+google-api-python-client>=2.90
+google-auth-httplib2>=0.1.0
+google-auth-oauthlib>=1.0.0
+watchdog>=2.2
+pydantic>=2.0
+pydantic-settings>=2.0
+
