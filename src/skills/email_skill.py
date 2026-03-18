@@ -20,3 +20,12 @@ def send_email(to: str, subject: str, text: str, html: str | None = None) -> dic
     resp = requests.post(url, json=payload, timeout=60)
     resp.raise_for_status()
     return resp.json()
+
+
+def send_email_v2() -> None:
+    """Example email sender matching the provided snippet."""
+    requests.post("http://localhost:3001/send-email", json={
+        "to": "client@example.com",
+        "subject": "Test",
+        "body": "Hello",
+    })

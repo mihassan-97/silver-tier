@@ -16,6 +16,7 @@ from .task_skill import (
 from .email_skill import create_email_task, send_email
 from .linkedin_skill import create_linkedin_draft, post_linkedin
 from .mcp_skill import run_mcp_action
+from .process_task import run as run_task_process
 
 __all__ = [
     "approve_task",
@@ -29,4 +30,5 @@ __all__ = [
     "create_linkedin_draft",
     "post_linkedin",
     "run_mcp_action",
+    "run_task_process",
 ]

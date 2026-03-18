@@ -49,8 +49,23 @@ This project implements a **local-first Personal AI Employee** using:
 ## How It Works
 1. **Watchers** detect new events and create Markdown tasks in `Vault/Needs_Action`
 2. **Claude Agent** reads `Needs_Action`, generates a plan (`Vault/Plans/Plan.md`), and moves completed tasks to `Vault/Done`
-3. **Human-in-the-loop**:_sensitive actions are written to `Pending_Approval` while awaiting approval in `Approved`
+
+   - If the plan includes a JSON action block like `send_email`, the system will call the MCP server to send the email automatically.
+
+3. **Human-in-the-loop (HITL)**
+
+   - Sensitive actions (email, payments, etc.) are written as task files into `Vault/Pending_Approval`.
+   - A human must manually move the file from `Vault/Pending_Approval` → `Vault/Approved` to authorize execution.
+   - Once approved, run `python -m src.approval_executor` to execute the approved actions.
+
 4. **MCP Server** executes actions (email sending / browser automation) when instructed
+
+---
+
+## LinkedIn Automation
+- Generates business posts automatically
+- Saves posts in `/Needs_Action` (via `src/agents/linkedin_agent.py`)
+- Can be extended to auto-post via Playwright or LinkedIn API
 
 ---
 
