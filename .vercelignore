@@ -1,0 +1,13 @@
+# Ignore local state / caches
+.venv/
+Vault/
+state/
+
+# Ignore non-deployed services
+mcp_server/
+
+# Ignore legacy API folder (moved into frontend)
+api/
+
+# Node artifacts
+node_modules/
