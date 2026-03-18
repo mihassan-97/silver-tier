@@ -15,6 +15,10 @@ yarn-error.log
 state/
 Vault/**/state*
 
+# Vercel / local deployment
+.vercel/
+
 # IDE
 .vscode/
 .idea/
+.vercel
