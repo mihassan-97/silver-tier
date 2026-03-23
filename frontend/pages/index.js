@@ -1,20 +1,17 @@
 export default function Home() {
   return (
-    <main style={{
-      fontFamily: 'system-ui, sans-serif',
-      padding: '4rem',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '1rem',
-      maxWidth: 640,
-      margin: '0 auto'
-    }}>
-      <h1>Silver Tier AI Employee</h1>
-      <p>This is a simple Next.js frontend placeholder.</p>
-      <p>
-        The backend API endpoints live in <code>/api</code>. Use them for tasks, approvals,
-        and agent automation.
-      </p>
-    </main>
-  );
+    <div style={{padding:40,fontFamily:"Arial"}}>
+      <h1>🤖 Silver Tier AI Employee</h1>
+      <p>Autonomous AI workflow system with approvals</p>
+
+      <h2>Status</h2>
+      <ul>
+        <li>✅ Watchers running</li>
+        <li>✅ Claude agent active</li>
+        <li>✅ Human approval flow</li>
+        <li>✅ MCP actions enabled</li>
+        <li>✅ Vercel deployed</li>
+      </ul>
+    </div>
+  )
 }
